@@ -1,0 +1,28 @@
+---
+title: "Marketing sites are software"
+description: "The case for treating your marketing site with the same engineering rigor you give your product — and what changes when you do."
+date: "2026-03-28"
+author: "Rean Cirl Balaba"
+tags: ["Engineering", "Tech"]
+ogImage: "/images/cover-cobra.svg"
+---
+
+There is a common pattern at growth-stage companies: the product engineering team operates with discipline — code review, observability, tests, performance budgets — and the marketing site operates with none of those things. It is built in a CMS no one likes, deployed manually, and quietly broken at any given time.
+
+This split is a leftover habit, not a useful distinction. The marketing site is software. It is the first piece of your product that most of your customers ever experience.
+
+## What changes when you treat it that way
+
+When you treat the marketing site like product, three things change.
+
+First, **performance becomes a budget, not a goal**. You set explicit ceilings — LCP under 1.5s, JS payload under 100KB, no layout shift — and you wire them into CI. Anything that violates the budget fails the build. Performance stops being something you "get back to."
+
+Second, **content is versioned**. Every page is in source control. Marketing copy ships through pull requests, gets reviewed, and rolls back cleanly. The marketing team gets fewer "the site is broken" Slack messages because the broken thing was caught in CI before deploy.
+
+Third, **observability shows up**. You instrument. You log Core Web Vitals from real users. You alert on regressions. You actually know when the site is slow, not weeks later when search rankings drop.
+
+## The trade-offs are real
+
+This is not free. A site treated as software demands engineering discipline that most marketing-led teams have not invested in. You lose the ability to give a non-technical team member the keys to fiddle with the homepage on a Tuesday afternoon.
+
+But what you get back is a site that is fast, that does not silently break, and that compounds in search the way a properly engineered system compounds in any domain. For most teams, that trade is worth it. For a few, it isn't. We tell people honestly which camp they're in.

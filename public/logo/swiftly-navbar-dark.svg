@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="320" height="60">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#F4E5A1"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+  </defs>
+  <!-- Fish icon - centered vertically with wordmark optical middle -->
+  <g transform="translate(15, 17) scale(0.32)">
+    <polygon points="0,40 80,10 80,70 0,40" fill="#F8F6F0"/>
+    <polygon points="80,10 130,40 80,70" fill="#FFFFFF"/>
+    <polygon points="0,40 -25,15 -10,40 -25,65" fill="#F8F6F0"/>
+    <polygon points="80,10 130,40 80,70" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+    <circle cx="105" cy="35" r="3.5" fill="url(#goldGrad)"/>
+    <line x1="40" y1="40" x2="60" y2="25" stroke="url(#goldGrad)" stroke-width="1"/>
+    <line x1="40" y1="40" x2="60" y2="55" stroke="url(#goldGrad)" stroke-width="1"/>
+  </g>
+  <!-- Wordmark - centered vertically using dominant-baseline -->
+  <text x="72" y="30" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="400" letter-spacing="-1.5"><tspan fill="#F8F6F0">swiftly</tspan><tspan fill="url(#goldGrad)">.ph</tspan></text>
+</svg>
