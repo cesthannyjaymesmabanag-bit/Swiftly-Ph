@@ -47,31 +47,33 @@ export function BrandLoader() {
     gsap.set(wordmarkRef.current, { opacity: 0, y: 12 });
 
     fishes.forEach((fish, i) => {
+      const swimDuration = 2.6 + (i % 3) * 0.4; // 2.6 – 3.4s per fish
+      const lanePosition = i * 0.18;
       tl.to(
         fish,
         {
           x: () => window.innerWidth + 240,
           opacity: 1,
-          duration: 1.6 + (i % 3) * 0.25,
+          duration: swimDuration,
           ease: "sine.inOut",
           keyframes: [
             { opacity: 0, duration: 0 },
-            { opacity: 0.85, duration: 0.18 },
+            { opacity: 0.85, duration: 0.22 },
             { opacity: 1 },
           ],
         },
-        i * 0.12,
+        lanePosition,
       );
       tl.to(
         fish,
         {
           y: "+=14",
-          duration: 0.6,
+          duration: 0.9,
           repeat: 1,
           yoyo: true,
           ease: "sine.inOut",
         },
-        i * 0.12,
+        lanePosition,
       );
     });
 
@@ -168,7 +170,7 @@ export function BrandLoader() {
           </span>
         </span>
         <span className="mt-3 text-[0.7rem] uppercase tracking-[0.18em] text-gold-light">
-          Tech · SEO · Content
+          Development · SEO · Content
         </span>
       </div>
     </div>

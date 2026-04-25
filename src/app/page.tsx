@@ -8,12 +8,12 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: `${SITE.name} — Tech, SEO & content built swiftly`,
+  title: `${SITE.name} — Development, SEO & content built swiftly`,
   description: SITE.description,
   alternates: { canonical: "/" },
   openGraph: {
     url: SITE.url,
-    title: `${SITE.name} — Tech, SEO & content built swiftly`,
+    title: `${SITE.name} — Development, SEO & content built swiftly`,
     description: SITE.description,
   },
 };

@@ -22,7 +22,7 @@ export function Hero() {
       <Container size="xl" as="div" className="relative pt-20 md:pt-28 pb-20 md:pb-32">
         <div className="max-w-4xl">
           <p data-hero-anim className="label-eyebrow gold-gradient-text">
-            Tech · SEO · Content
+            Development · SEO · Content
           </p>
           <h1
             data-hero-anim

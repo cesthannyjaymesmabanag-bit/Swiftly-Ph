@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — Tech, SEO & content built swiftly`,
+    default: `${SITE.name} — Development, SEO & content built swiftly`,
     template: `%s — ${SITE.name}`,
   },
   description: SITE.description,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     locale: "en_PH",
     url: SITE.url,
     siteName: SITE.name,
-    title: `${SITE.name} — Tech, SEO & content built swiftly`,
+    title: `${SITE.name} — Development, SEO & content built swiftly`,
     description: SITE.description,
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — Tech, SEO & content built swiftly`,
+    title: `${SITE.name} — Development, SEO & content built swiftly`,
     description: SITE.description,
     images: ["/opengraph-image"],
   },

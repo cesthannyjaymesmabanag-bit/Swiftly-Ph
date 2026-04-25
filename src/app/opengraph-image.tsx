@@ -54,7 +54,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            Tech · SEO · Content
+            Development · SEO · Content
           </span>
         </div>
 

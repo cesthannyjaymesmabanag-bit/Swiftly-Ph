@@ -9,7 +9,7 @@ export const SITE = {
   name: "Swiftly.ph",
   url: "https://swiftly.ph",
   shortName: "Swiftly",
-  tagline: "Tech · SEO · Content. Built swiftly.",
+  tagline: "Development · SEO · Content. Built swiftly.",
   description:
     "Swiftly.ph is a Philippine-based tech, SEO, and content agency. We build websites and growth systems that compound, with the discipline of senior engineering and the patience of long-form craft.",
   email: "hello@swiftly.ph",

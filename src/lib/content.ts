@@ -16,7 +16,7 @@ export const services: Service[] = [
     id: "tech",
     slug: "tech",
     icon: Code2,
-    title: "Tech & development",
+    title: "Development",
     short:
       "Production-grade websites and growth systems engineered with the discipline of a senior team.",
     description:

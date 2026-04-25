@@ -115,7 +115,7 @@ export function ContactForm() {
             <option value="" disabled>
               Select a service…
             </option>
-            <option value="tech">Tech & development</option>
+            <option value="tech">Development</option>
             <option value="seo">SEO strategy</option>
             <option value="content">Content production</option>
             <option value="all">All three</option>

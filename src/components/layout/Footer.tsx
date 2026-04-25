@@ -55,7 +55,7 @@ const linkColumns = [
   {
     heading: "Services",
     links: [
-      { href: "/services#tech", label: "Tech & development" },
+      { href: "/services#tech", label: "Development" },
       { href: "/services#seo", label: "SEO strategy" },
       { href: "/services#content", label: "Content production" },
     ],
