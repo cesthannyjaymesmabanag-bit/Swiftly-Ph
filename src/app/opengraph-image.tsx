@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Swiftly.ph — tech, SEO, and content built swiftly";
+export const alt = "Swiftlyph — tech, SEO, and content built swiftly";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -83,7 +83,7 @@ export default function OpengraphImage() {
               letterSpacing: "-0.01em",
             }}
           >
-            swiftly.ph — a Manila-based studio for ambitious teams.
+            swiftlyph — an Iligan-based studio for ambitious teams.
           </div>
         </div>
 

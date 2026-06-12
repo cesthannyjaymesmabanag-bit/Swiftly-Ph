@@ -17,5 +17,5 @@
     <line x1="40" y1="40" x2="60" y2="55" stroke="url(#goldGrad)" stroke-width="1"/>
   </g>
   <!-- Wordmark with textLength to guarantee precise width across font fallbacks -->
-  <text x="60" y="25" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="400" textLength="115" lengthAdjust="spacingAndGlyphs"><tspan fill="#F8F6F0">swiftly</tspan><tspan fill="url(#goldGrad)">.ph</tspan></text>
+  <text x="60" y="25" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="400" textLength="110" lengthAdjust="spacingAndGlyphs"><tspan fill="#F8F6F0">swiftly</tspan><tspan fill="url(#goldGrad)">ph</tspan></text>
 </svg>

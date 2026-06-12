@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "SEO agency Philippines",
     "Next.js development",
     "content marketing",
-    "Manila tech agency",
+    "Iligan tech agency",
     "Swiftly",
   ],
   authors: [{ name: SITE.name, url: SITE.url }],
@@ -93,7 +93,7 @@ const organizationSchema = {
   email: SITE.email,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Manila",
+    addressLocality: "Iligan",
     addressCountry: "PH",
   },
   sameAs: [SITE.social.facebook, SITE.social.instagram, SITE.social.linkedin],

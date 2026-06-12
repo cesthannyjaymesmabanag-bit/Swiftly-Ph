@@ -47,8 +47,8 @@ export function BrandLoader() {
     gsap.set(wordmarkRef.current, { opacity: 0, y: 12 });
 
     fishes.forEach((fish, i) => {
-      const swimDuration = 2.6 + (i % 3) * 0.4; // 2.6 – 3.4s per fish
-      const lanePosition = i * 0.18;
+      const swimDuration = 1.2 + (i % 3) * 0.2; // 1.2 – 1.6s per fish
+      const lanePosition = i * 0.08;
       tl.to(
         fish,
         {
@@ -58,7 +58,7 @@ export function BrandLoader() {
           ease: "sine.inOut",
           keyframes: [
             { opacity: 0, duration: 0 },
-            { opacity: 0.85, duration: 0.22 },
+            { opacity: 0.85, duration: 0.18 },
             { opacity: 1 },
           ],
         },
@@ -68,7 +68,7 @@ export function BrandLoader() {
         fish,
         {
           y: "+=14",
-          duration: 0.9,
+          duration: 0.5,
           repeat: 1,
           yoyo: true,
           ease: "sine.inOut",
@@ -79,19 +79,19 @@ export function BrandLoader() {
 
     tl.to(
       wordmarkRef.current,
-      { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
-      0.4,
+      { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+      0.2,
     );
 
     tl.to(
       wordmarkRef.current,
-      { opacity: 0, y: -8, duration: 0.45, ease: "power1.in" },
-      "+=0.4",
+      { opacity: 0, y: -8, duration: 0.3, ease: "power1.in" },
+      "+=0.1",
     );
 
     tl.to(
       rootRef.current,
-      { opacity: 0, duration: 0.5, ease: "power1.inOut" },
+      { opacity: 0, duration: 0.3, ease: "power1.inOut" },
       "<",
     );
 
@@ -114,7 +114,7 @@ export function BrandLoader() {
   // Unmount after fade-out completes.
   React.useEffect(() => {
     if (phase !== "leaving") return;
-    const t = setTimeout(() => setPhase("hidden"), 600);
+    const t = setTimeout(() => setPhase("hidden"), 300);
     return () => clearTimeout(t);
   }, [phase]);
 
@@ -126,7 +126,7 @@ export function BrandLoader() {
       ref={rootRef}
       role="status"
       aria-live="polite"
-      aria-label="Loading Swiftly.ph"
+      aria-label="Loading Swiftlyph"
       className="fixed inset-0 z-[100] bg-emerald-deep flex items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0">
@@ -166,7 +166,7 @@ export function BrandLoader() {
                 "linear-gradient(135deg,#D4AF37 0%,#F4E5A1 50%,#B8860B 100%)",
             }}
           >
-            .ph
+            ph
           </span>
         </span>
         <span className="mt-3 text-[0.7rem] uppercase tracking-[0.18em] text-gold-light">

@@ -9,7 +9,7 @@ import { SITE } from "@/lib/utils";
 
 const title = "Work — selected case studies";
 const description =
-  "Selected work from Swiftly.ph: brand sites, marketing platforms, and SEO programs that earned compounding growth for the teams behind them.";
+  "Selected work from Swiftlyph: brand sites, marketing platforms, and SEO programs that earned compounding growth for the teams behind them.";
 
 export const metadata: Metadata = {
   title,

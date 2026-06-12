@@ -6,9 +6,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { CTABand } from "@/components/sections/CTABand";
 import { SITE } from "@/lib/utils";
 
-const title = "About — the studio behind Swiftly.ph";
+const title = "About — the studio behind Swiftlyph";
 const description =
-  "Swiftly is a small Manila-based studio building tech, SEO, and content for ambitious teams. Rooted in Isaiah 60:22, built for compounding growth.";
+  "Swiftly is a small Iligan-based studio building tech, SEO, and content for ambitious teams. Rooted in Isaiah 60:22, built for compounding growth.";
 
 export const metadata: Metadata = {
   title,
@@ -79,7 +79,7 @@ export default function AboutPage() {
               patience to do it well and the discipline to ship it on time.
             </p>
             <p>
-              We are based in Manila and we work with founders, marketing
+              We are based in Iligan and we work with founders, marketing
               leaders, and product teams who care about how their websites are
               built, not only how they look on launch day. Our background is
               senior product engineering and editorial work; we treat marketing

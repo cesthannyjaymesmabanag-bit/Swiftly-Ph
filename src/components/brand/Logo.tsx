@@ -17,7 +17,7 @@ const SOURCES = {
 } as const;
 
 /**
- * Swiftly.ph logo lockup (fish + wordmark) rendered from the static SVG assets.
+ * Swiftlyph logo lockup (fish + wordmark) rendered from the static SVG assets.
  * "light" is for cream/light backgrounds (emerald wordmark).
  * "dark" is for emerald/dark backgrounds (cream wordmark).
  */
@@ -32,7 +32,7 @@ export function Logo({
   return (
     <Image
       src={SOURCES[variant]}
-      alt="Swiftly.ph"
+      alt="Swiftlyph"
       width={width}
       height={height}
       priority={priority}

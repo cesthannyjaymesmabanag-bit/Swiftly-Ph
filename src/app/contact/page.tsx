@@ -8,7 +8,7 @@ import { SITE } from "@/lib/utils";
 
 const title = "Contact — start a project with Swiftly";
 const description =
-  "Tell us about the work. Swiftly principals reply to every inquiry inside two business days. Manila-based, working with teams worldwide.";
+  "Tell us about the work. Swiftly principals reply to every inquiry inside two business days. Iligan-based, working with teams worldwide.";
 
 export const metadata: Metadata = {
   title,

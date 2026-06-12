@@ -6,14 +6,14 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const SITE = {
-  name: "Swiftly.ph",
-  url: "https://swiftly.ph",
+  name: "Swiftlyph",
+  url: "https://swiftlyph.com",
   shortName: "Swiftly",
   tagline: "Development · SEO · Content. Built swiftly.",
   description:
-    "Swiftly.ph is a Philippine-based tech, SEO, and content agency. We build websites and growth systems that compound, with the discipline of senior engineering and the patience of long-form craft.",
-  email: "hello@swiftly.ph",
-  location: "Manila, Philippines",
+    "Swiftlyph is a Philippine-based tech, SEO, and content agency. We build websites and growth systems that compound, with the discipline of senior engineering and the patience of long-form craft.",
+  email: "hello@swiftlyph.com",
+  location: "Iligan, Philippines",
   social: {
     facebook: "https://facebook.com/swiftlyph",
     instagram: "https://instagram.com/swiftlyph",

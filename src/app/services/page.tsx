@@ -11,7 +11,7 @@ import { SITE } from "@/lib/utils";
 
 const title = "Services — tech, SEO and content";
 const description =
-  "Production-grade web engineering, technical SEO, and long-form content. Three disciplines from one Manila-based team, built for compounding growth.";
+  "Production-grade web engineering, technical SEO, and long-form content. Three disciplines from one Iligan-based team, built for compounding growth.";
 
 export const metadata: Metadata = {
   title,

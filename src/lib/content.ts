@@ -177,7 +177,7 @@ export const faqs = [
   },
   {
     q: "Are you a full-time team or a network of freelancers?",
-    a: "Swiftly is a small core team based in Manila with a curated bench of senior collaborators we have worked with for years. Every project is led by a Swiftly principal who is on the engagement from kickoff to launch — there is no junior handoff and no offshore translation layer.",
+    a: "Swiftly is a small core team based in Iligan with a curated bench of senior collaborators we have worked with for years. Every project is led by a Swiftly principal who is on the engagement from kickoff to launch — there is no junior handoff and no offshore translation layer.",
   },
   {
     q: "How do you price work?",

@@ -54,7 +54,7 @@ export function Navbar() {
         >
           <Link
             href="/"
-            aria-label="Swiftly.ph — home"
+            aria-label="Swiftlyph — home"
             className="flex items-center"
           >
             <Logo variant={scrolled ? "dark" : "light"} size={56} priority />
