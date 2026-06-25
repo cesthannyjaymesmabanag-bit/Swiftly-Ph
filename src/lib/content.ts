@@ -89,6 +89,7 @@ export type CaseStudy = {
   outcome: string;
   metric: string;
   cover: string;
+  coverFit?: "cover" | "contain";
   brief: string;
   challenge: string;
   approach: string[];
@@ -96,77 +97,81 @@ export type CaseStudy = {
   stats: { label: string; value: string }[];
   stack: string[];
   testimonial?: { quote: string; author: string; role: string };
+  website?: string;
   publishedAt: string;
 };
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "cordillera-coffee",
-    client: "Cordillera Coffee Co.",
-    title: "Rebuilding a heritage coffee brand for the modern shelf",
-    type: "Brand site · E-commerce · SEO",
-    outcome: "+312% organic traffic in 6 months",
-    metric: "+312% organic",
-    cover: "/images/cover-cordillera.svg",
+    slug: "archant-shopify-maintenance",
+    client: "Archant",
+    title: "Shopify maintenance and custom apps for a design commerce brand",
+    type: "Shopify · Maintenance · Custom apps",
+    outcome: "Ongoing ecommerce improvements",
+    metric: "Shopify support",
+    cover: "/images/archant-homepage.jpg",
     brief:
-      "Cordillera Coffee Co. is a third-generation Benguet roaster moving from wholesale into direct-to-consumer. They came to us with a thin Shopify theme, no organic strategy, and a story their existing site was hiding.",
+      "Archant is an Australia-based design commerce brand with an established Shopify storefront. Swiftlyph supports the existing site through maintenance, targeted improvements, and custom app work. We did not build the original store; our role is to improve and extend it carefully around live commerce operations.",
     challenge:
-      "The existing storefront ranked for nothing. Page speed was painful, the content was generic, and the brand's heritage — three generations of farmers in the Cordilleras — was buried beneath stock photography.",
+      "Archant's Shopify site supports product discovery, trade account flows, editorial inspiration, and ecommerce conversion. The work requires steady technical maintenance and scoped improvements without interrupting customers, internal teams, or day-to-day store operations.",
     approach: [
-      "Rebuilt the storefront on Next.js with a headless Shopify backend, cutting LCP from 4.2s to 1.1s.",
-      "Mapped the keyword landscape across origin coffee, brewing methods, and Filipino specialty roasters.",
-      "Produced twelve pillar guides written by a former barista trainer, each with original photography from the farms.",
-      "Implemented Product, Article, and Organization schema across the catalog and editorial content.",
+      "Maintain and improve the existing Shopify theme and app surface without unnecessary rebuild work.",
+      "Ship scoped frontend and backend improvements around real commerce workflows.",
+      "Build custom Shopify app functionality where off-the-shelf tooling does not fit the operational need.",
+      "Handle technical fixes, quality checks, and incremental enhancements with care for the live storefront.",
     ],
     outcomeBody:
-      "Six months in, organic sessions tripled and the brand now ranks first for nine of its target queries. DTC revenue grew from 8% of total to 34%, and the editorial work has been republished by two industry trade publications.",
+      "Archant has an ongoing technical partner for Shopify maintenance, improvements, and custom app work. The engagement is intentionally practical: keep the existing commerce platform stable, make the right improvements at the right time, and extend Shopify where the business needs more than standard theme or app configuration.",
     stats: [
-      { label: "Organic traffic", value: "+312%" },
-      { label: "DTC revenue share", value: "8% → 34%" },
-      { label: "LCP", value: "4.2s → 1.1s" },
+      { label: "Engagement", value: "Ongoing" },
+      { label: "Platform", value: "Shopify" },
+      { label: "Scope", value: "Maintenance + apps" },
     ],
-    stack: ["Next.js", "Shopify (Storefront API)", "Sanity", "Vercel"],
-    testimonial: {
-      quote:
-        "We finally have a site that sounds like us and works as hard as we do. Swiftly didn't just rebuild the store — they rebuilt how customers find us.",
-      author: "Marisol Bautista",
-      role: "Director, Cordillera Coffee Co.",
-    },
-    publishedAt: "2026-02-12",
+    stack: [
+      "Shopify",
+      "Liquid",
+      "JavaScript",
+      "Shopify apps",
+      "Ecommerce maintenance",
+    ],
+    website: "https://www.archant.com.au",
+    publishedAt: "2026-06-25",
   },
   {
-    slug: "manila-fintech",
-    client: "Cobra Pay",
-    title: "A fintech homepage that finally explained the product",
-    type: "Marketing site · Tech · Content",
-    outcome: "2.4× signup conversion in 90 days",
-    metric: "2.4× signups",
-    cover: "/images/cover-cobra.svg",
+    slug: "crateonscene-mvp",
+    client: "CrateOnScene",
+    title: "MVP build for a national car event discovery platform",
+    type: "MVP · Product build · Ongoing support",
+    outcome: "From ideation to live product",
+    metric: "MVP launched",
+    cover: "/images/crateos-logo.png",
+    coverFit: "contain",
     brief:
-      "Cobra Pay is a Manila-based payments platform for SME exporters. Their old site led with vague value props and lost most visitors before they understood the product.",
+      "CrateOnScene is a car-event discovery platform for spectators, drivers, event producers, and businesses connected to the automotive scene. Swiftlyph helped take the product from ideation through MVP design, build, and deployment, then continued with new features, bug fixes, and product improvements after launch.",
     challenge:
-      "Engineering had built a powerful platform, but marketing was speaking in abstractions. Bounce on the homepage was 71%. The content didn't match the sophistication of the underlying product.",
+      "The product needed to move quickly from concept to a usable public platform while supporting several real workflows: event discovery, event detail pages, business profiles, user registration, role-specific onboarding, and a lightweight app-like experience for repeat users.",
     approach: [
-      "Interviewed nine customers to surface the real jobs-to-be-done and the language they use.",
-      "Rewrote the homepage and four product pages around concrete workflows, not abstract benefits.",
-      "Rebuilt the marketing site on Next.js with a CMS so the team could ship copy weekly without engineering.",
-      "Added schema and a content hub for SME exporter education that is now the team's top lead source.",
+      "Shaped the MVP scope from the initial product idea into a buildable launch plan.",
+      "Built and deployed the public event-discovery experience with event listings, featured spotlights, and location/date context.",
+      "Implemented account flows and role-specific paths for spectators, drivers, businesses, and event producers.",
+      "Continued post-launch development with new features, bug fixes, UX refinements, and operational support.",
     ],
     outcomeBody:
-      "Inside 90 days, signup conversion from the homepage went from 1.7% to 4.1%. The exporter education hub now drives more qualified leads than paid acquisition, at roughly a tenth of the cost.",
+      "CrateOnScene launched as a working MVP with a live public event directory and the foundations for a broader automotive-scene platform. The work did not stop at deployment: Swiftlyph continues to support the product through feature development, bug fixing, and practical improvements informed by real usage.",
     stats: [
-      { label: "Homepage signup CVR", value: "1.7% → 4.1%" },
-      { label: "Bounce rate", value: "71% → 38%" },
-      { label: "Organic leads", value: "+490%" },
+      { label: "Stage", value: "MVP to live" },
+      { label: "Scope", value: "Build + support" },
+      { label: "Product", value: "Event platform" },
     ],
-    stack: ["Next.js", "Sanity", "Vercel", "Segment"],
-    testimonial: {
-      quote:
-        "Swiftly did the work we'd been trying to do for two years. The new site finally describes what we actually built.",
-      author: "JP Tan",
-      role: "Co-founder, Cobra Pay",
-    },
-    publishedAt: "2026-01-18",
+    stack: [
+      "Product strategy",
+      "Full-stack development",
+      "MVP delivery",
+      "Deployment",
+      "Feature support",
+    ],
+    website: "https://crateonscene.com",
+    publishedAt: "2026-06-25",
   },
 ];
 

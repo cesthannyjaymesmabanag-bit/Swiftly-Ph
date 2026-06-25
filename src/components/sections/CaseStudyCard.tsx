@@ -2,21 +2,32 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { CaseStudy } from "@/lib/content";
+import { cn } from "@/lib/utils";
 
 export function CaseStudyCard({ study }: { study: CaseStudy }) {
+  const containedCover = study.coverFit === "contain";
+
   return (
     <Link
       href={`/work/${study.slug}`}
       className="group block focus:outline-none"
     >
       <article className="border border-gold-base/30 rounded-sm overflow-hidden transition-all duration-300 group-hover:border-gold-base/70 group-focus-visible:ring-2 group-focus-visible:ring-gold-base group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-cream">
-        <div className="relative aspect-[16/10] overflow-hidden bg-emerald-soft">
+        <div
+          className={cn(
+            "relative aspect-[16/10] overflow-hidden",
+            containedCover ? "bg-[#050914]" : "bg-emerald-soft",
+          )}
+        >
           <Image
             src={study.cover}
             alt={`${study.client} — ${study.title}`}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            className={cn(
+              "transition-transform duration-700 group-hover:scale-[1.03]",
+              containedCover ? "object-contain p-12 md:p-16" : "object-cover",
+            )}
           />
         </div>
         <div className="p-7 md:p-8 bg-cream">

@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowLeft, ExternalLink } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+import { Button } from "@/components/ui/Button";
 import { GoldDivider } from "@/components/brand/GoldDivider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { CTABand } from "@/components/sections/CTABand";
 import { caseStudies } from "@/lib/content";
-import { SITE } from "@/lib/utils";
+import { cn, SITE } from "@/lib/utils";
 
 type Params = { slug: string };
 
@@ -58,6 +59,7 @@ export default async function CaseStudyPage({
 
   const idx = caseStudies.findIndex((s) => s.slug === slug);
   const next = caseStudies[(idx + 1) % caseStudies.length];
+  const containedCover = study.coverFit === "contain";
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -129,14 +131,19 @@ export default async function CaseStudyPage({
         {/* Cover */}
         <section className="pb-16 md:pb-24">
           <Container size="xl">
-            <div className="relative aspect-[16/10] rounded-sm border border-gold-base/30 overflow-hidden bg-emerald-soft">
+            <div
+              className={cn(
+                "relative aspect-[16/10] rounded-sm border border-gold-base/30 overflow-hidden",
+                containedCover ? "bg-[#050914]" : "bg-emerald-soft",
+              )}
+            >
               <Image
                 src={study.cover}
                 alt={`${study.client} — ${study.title}`}
                 fill
                 priority
                 sizes="(max-width: 1280px) 100vw, 1280px"
-                className="object-cover"
+                className={containedCover ? "object-contain p-16 md:p-24" : "object-cover"}
               />
             </div>
           </Container>
@@ -235,6 +242,20 @@ export default async function CaseStudyPage({
                       </li>
                     ))}
                   </ul>
+
+                  {study.website && (
+                    <Button
+                      href={study.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="primary"
+                      size="md"
+                      className="mt-8 w-full"
+                    >
+                      Visit website
+                      <ExternalLink size={14} />
+                    </Button>
+                  )}
                 </div>
               </aside>
             </div>

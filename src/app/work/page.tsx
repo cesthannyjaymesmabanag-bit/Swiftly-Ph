@@ -7,9 +7,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { caseStudies } from "@/lib/content";
 import { SITE } from "@/lib/utils";
 
-const title = "Work — selected case studies";
+const title = "Work — Swiftlyph";
 const description =
-  "Selected work from Swiftlyph: brand sites, marketing platforms, and SEO programs that earned compounding growth for the teams behind them.";
+  "Selected Swiftlyph client work, including Shopify maintenance, ecommerce improvements, and custom app support for established brands.";
 
 export const metadata: Metadata = {
   title,
@@ -45,12 +45,12 @@ export default function WorkPage() {
         <Container size="xl">
           <p className="label-eyebrow gold-gradient-text">Work</p>
           <h1 className="mt-6 max-w-4xl font-serif text-4xl md:text-6xl lg:text-7xl tracking-display text-emerald-deep leading-[1.05]">
-            A short, honest portfolio.
+            Selected work, honestly scoped.
           </h1>
           <p className="mt-8 max-w-2xl text-lg md:text-xl leading-relaxed text-ink-muted">
-            We share the work we are most proud of — and the outcomes the work
-            earned. Every engagement starts with the same question: what should
-            this site do that the current one cannot?
+            Some projects are full builds. Some are ongoing maintenance,
+            improvements, and custom app work for platforms already in market.
+            We describe the scope clearly.
           </p>
           <GoldDivider width="medium" className="mt-10" />
         </Container>
@@ -58,11 +58,21 @@ export default function WorkPage() {
 
       <section className="pb-20 md:pb-28">
         <Container size="xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {caseStudies.map((s) => (
-              <CaseStudyCard key={s.slug} study={s} />
-            ))}
-          </div>
+          {caseStudies.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {caseStudies.map((s) => (
+                <CaseStudyCard key={s.slug} study={s} />
+              ))}
+            </div>
+          ) : (
+            <div className="border-y border-gold-base/30 py-12">
+              <p className="label-eyebrow text-emerald-mid">No public work yet</p>
+              <p className="mt-4 max-w-2xl text-ink-muted leading-relaxed">
+                We will add real case studies here when they are approved for
+                publication.
+              </p>
+            </div>
+          )}
         </Container>
       </section>
 

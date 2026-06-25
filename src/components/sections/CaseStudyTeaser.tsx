@@ -7,6 +7,8 @@ import { caseStudies } from "@/lib/content";
 
 export function CaseStudyTeaser() {
   const featured = caseStudies[0];
+  if (!featured) return null;
+
   return (
     <section
       aria-labelledby="featured-heading"
