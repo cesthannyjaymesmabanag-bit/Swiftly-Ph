@@ -32,7 +32,7 @@ export function CTABand() {
             id="cta-heading"
             className="mt-5 font-serif text-4xl md:text-6xl tracking-display leading-[1.05] text-cream"
           >
-            Let&rsquo;s build something that grows.
+            Let&rsquo;s Build Something That Grows.
           </h2>
           <p className="mt-6 text-cream/85 max-w-xl leading-relaxed">
             Tell us about the work. We&rsquo;ll come back inside two business days

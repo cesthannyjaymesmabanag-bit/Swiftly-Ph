@@ -70,12 +70,23 @@ export function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    aria-current={active ? "page" : undefined}
                     className={cn(
                       "relative text-sm font-medium tracking-tight transition-colors py-2",
-                      scrolled
-                        ? "text-cream hover:text-gold-light"
-                        : "text-emerald-deep hover:text-emerald-mid",
-                      active && "after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:gold-gradient",
+                      active
+                        ? scrolled
+                          ? "text-gold-light"
+                          : "font-semibold text-emerald-mid"
+                        : scrolled
+                          ? "text-cream/80 hover:text-gold-light"
+                          : "text-ink-muted hover:text-emerald-mid",
+                      active &&
+                        cn(
+                          "after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-0.5",
+                          scrolled
+                            ? "after:bg-gold-light"
+                            : "after:bg-emerald-mid",
+                        ),
                     )}
                   >
                     {link.label}
@@ -138,6 +149,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    aria-current={active ? "page" : undefined}
                     onClick={closeMobile}
                     className={cn(
                       "block font-serif text-3xl tracking-tightish",

@@ -6,7 +6,8 @@ import { Accordion, AccordionItem } from "@/components/ui/Accordion";
 import { GoldDivider } from "@/components/brand/GoldDivider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { CTABand } from "@/components/sections/CTABand";
-import { services, faqs } from "@/lib/content";
+import { CaseStudyCard } from "@/components/sections/CaseStudyCard";
+import { services, caseStudies, faqs } from "@/lib/content";
 import { SITE } from "@/lib/utils";
 
 const title = "Services — tech, SEO and content";
@@ -63,6 +64,12 @@ const faqSchema = {
   })),
 };
 
+const featuredProjectByService: Record<string, string> = {
+  tech: "archant-shopify-maintenance",
+  seo: "dekayed-shopify-storefront",
+  content: "dogfix-astro-content-platform",
+};
+
 export default function ServicesPage() {
   return (
     <>
@@ -90,6 +97,9 @@ export default function ServicesPage() {
         {services.map((service, idx) => {
           const Icon = service.icon;
           const reversed = idx % 2 === 1;
+          const featuredProject = caseStudies.find(
+            (study) => study.slug === featuredProjectByService[service.id],
+          );
           return (
             <section
               key={service.id}
@@ -167,24 +177,23 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="lg:col-span-5 lg:sticky lg:top-28">
-                    <figure className="relative aspect-[4/5] border border-gold-base/30 rounded-sm overflow-hidden bg-emerald-deep">
-                      <div
-                        aria-hidden="true"
-                        className="absolute inset-0 flex flex-col justify-between p-10"
-                      >
-                        <p className="label-eyebrow text-gold-light">
-                          {String(idx + 1).padStart(2, "0")} / 03
-                        </p>
-                        <div>
-                          <p className="font-serif italic text-2xl md:text-3xl text-cream leading-snug">
-                            “{service.short}”
-                          </p>
-                          <p className="mt-6 label-eyebrow text-gold-light">
-                            {service.title}
+                    {featuredProject && (
+                      <div>
+                        <div className="mb-5 flex items-center gap-3">
+                          <span
+                            aria-hidden="true"
+                            className="h-px w-10 gold-gradient"
+                          />
+                          <p className="label-eyebrow text-emerald-mid">
+                            Featured {service.title} project
                           </p>
                         </div>
+                        <CaseStudyCard study={featuredProject} />
+                        <p className="mt-5 border-l-2 border-gold-base pl-4 font-serif italic leading-relaxed text-ink-muted">
+                          {service.short}
+                        </p>
                       </div>
-                    </figure>
+                    )}
                   </div>
                 </div>
               </Container>
